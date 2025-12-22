@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.C.B - Basket Club Bergues</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logo2.png">
+    <link rel="shortcut icon" type="image/png" href="assets/img/logo2.png">
+    <link rel="apple-touch-icon" href="assets/img/logo2.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-section">
+            <img src="assets/img/logo2.png" alt="Basket Club Bergues" class="logo-img">
+            <h1 class="app-name">BASKET CLUB BERGUES</h1>
+        </div>
+        
+        <div class="auth-section">
+            <!-- Le contrôle du son sera inséré ici automatiquement -->
+            
+            <button class="login-btn" id="loginBtn" onclick="showLoginModal()">Se connecter</button>
+            
+            <div class="user-info hidden" id="userInfo">
+                <span class="user-name" id="userName"></span>
+                <span class="user-points" id="userPoints">
+                    <span>⭐</span>
+                    <span id="pointsValue">0</span>
+                </span>
+                <button class="logout-btn" onclick="logout()">Déconnexion</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Modal de connexion -->
+    <div class="modal-overlay hidden" id="loginModal">
+        <div class="modal">
+            <h2>Connexion</h2>
+            <p>Connectez-vous pour accéder à votre espace</p>
+            
+            <div id="errorMessage" class="error-message hidden"></div>
+            
+            <form id="loginForm" onsubmit="handleAuth(event)">
+                <div class="form-group">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" placeholder="Entrez votre nom" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" placeholder="Entrez votre prénom" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" placeholder="Entrez votre mot de passe" required minlength="4">
+                </div>
+                
+                <div class="modal-buttons">
+                    <button type="button" class="modal-btn modal-btn-secondary" onclick="closeLoginModal()">
+                        Annuler
+                    </button>
+                    <button type="submit" class="modal-btn modal-btn-primary" id="authSubmitBtn">
+                        Se connecter
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Contenu principal -->
+    <div class="main-content" id="mainContent"></div>
+
+    <!-- Scripts - IMPORTANT : sound-system.js en premier ! -->
+    <!-- <script src="sound-system.js"></script> -->
+    <script src="pages.js"></script>
+    <script src="qcm-data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
