@@ -580,8 +580,7 @@ header {
 }
 
 /* ========================================
-   RESPONSIVE DESIGN COMPLET
-   À ajouter à la fin de votre styles.css
+   RESPONSIVE DESIGN OPTIMISÉ
 ======================================== */
 
 /* ========================================
@@ -589,15 +588,16 @@ header {
 ======================================== */
 @media (max-width: 1024px) {
     header {
-        padding: 20px 30px;
+        padding: 5vh 5vw;
     }
 
     .main-content {
         flex-direction: column-reverse;
-        padding: 30px 20px;
-        gap: 30px;
+        padding: 5vh 3vw;
+        gap: 3vh;
         max-height: none;
         min-height: auto;
+        overflow-x: auto; /* scroll si le contenu dépasse */
     }
 
     .left-section,
@@ -607,108 +607,76 @@ header {
     }
 
     .section-title {
-        font-size: 28px;
+        font-size: 2rem;
         text-align: center;
     }
 
     .section-subtitle {
-        font-size: 15px;
+        font-size: 1rem;
         text-align: center;
     }
 
     .image-container {
-        max-width: 400px;
-        height: 400px;
+        max-width: 90%;
+        height: auto;
         margin: 0 auto;
     }
 
     .nav-button {
-        padding: 16px 25px;
-        font-size: 15px;
+        padding: 1rem 1.5rem;
+        font-size: 0.9rem;
     }
 
     .button-description {
-        font-size: 11px;
+        font-size: 0.8rem;
     }
 }
 
 /* ========================================
-   MOBILE PAYSAGE (768px et moins)
+   MOBILE (768px et moins)
 ======================================== */
 @media (max-width: 768px) {
     header {
-        padding: 15px 20px;
+        padding: 3vh 3vw;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 1vw;
     }
 
     .logo-img {
-        height: 50px;
+        height: 8vh;
     }
 
     .app-name {
-        font-size: 18px;
+        font-size: 1.2rem;
     }
 
     .auth-section {
-        gap: 10px;
-    }
-
-    .login-btn {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
-
-    .user-points {
-        padding: 5px 10px;
-        font-size: 12px;
-    }
-
-    .logout-btn {
-        padding: 8px 15px;
-        font-size: 13px;
+        gap: 1vw;
     }
 
     .main-content {
-        padding: 20px 15px;
-        gap: 20px;
+        padding: 3vh 2vw;
+        gap: 2vh;
+        overflow-x: auto;
     }
 
     .section-title {
-        font-size: 24px;
+        font-size: 1.8rem;
     }
 
     .section-subtitle {
-        font-size: 14px;
-    }
-
-    .nav-button {
-        padding: 14px 20px;
-        font-size: 14px;
-    }
-
-    .nav-button::after {
-        right: 20px;
-        font-size: 18px;
-    }
-
-    .nav-button:hover::after {
-        right: 15px;
+        font-size: 0.9rem;
     }
 
     .image-container {
         max-width: 100%;
-        height: 300px;
+        height: auto;
+        object-fit: cover;
     }
 
-    /* Modal responsive */
     .modal {
-        padding: 30px 20px;
+        padding: 3vh 3vw;
         width: 95%;
-    }
-
-    .modal h2 {
-        font-size: 24px;
     }
 
     .modal-buttons {
@@ -719,15 +687,10 @@ header {
         width: 100%;
     }
 
-    /* Contrôle du son */
     .sound-toggle-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
-    }
-
-    .sound-control {
-        margin-right: 10px;
+        width: 4vh;
+        height: 4vh;
+        font-size: 1.2rem;
     }
 }
 
@@ -736,135 +699,50 @@ header {
 ======================================== */
 @media (max-width: 640px) {
     header {
-        padding: 12px 15px;
+        padding: 2vh 2vw;
     }
 
     .logo-img {
-        height: 40px;
+        height: 6vh;
     }
 
     .app-name {
-        font-size: 14px;
-        letter-spacing: 0;
+        font-size: 1rem;
     }
 
-    .logo-section {
-        gap: 10px;
-    }
-
-    /* Cacher le nom d'utilisateur sur très petit écran */
     .user-name {
-        display: none;
-    }
-
-    .user-points {
-        padding: 4px 8px;
-        font-size: 11px;
-    }
-
-    .logout-btn {
-        padding: 6px 12px;
-        font-size: 12px;
-    }
-
-    .login-btn {
-        padding: 8px 15px;
-        font-size: 13px;
+        display: none; /* cacher sur très petit écran */
     }
 
     .main-content {
-        padding: 15px 10px;
-        gap: 15px;
-    }
-
-    .left-section,
-    .right-section {
-        gap: 15px;
-    }
-
-    .section-title {
-        font-size: 22px;
-        margin-bottom: 8px;
-    }
-
-    .section-subtitle {
-        font-size: 13px;
-        margin-bottom: 20px;
-    }
-
-    .nav-button {
-        padding: 12px 18px;
-        font-size: 13px;
-        border-radius: 12px;
-    }
-
-    .button-description {
-        font-size: 10px;
-    }
-
-    .nav-button::after {
-        right: 15px;
-        font-size: 16px;
-    }
-
-    .nav-button:hover {
-        transform: translateX(5px);
-    }
-
-    .nav-button:hover::after {
-        right: 12px;
+        padding: 2vh 2vw;
+        gap: 2vh;
+        overflow-x: auto;
     }
 
     .image-container {
-        height: 250px;
+        height: auto;
+        max-width: 100%;
     }
 
-    .placeholder-text {
-        font-size: 14px;
-        padding: 20px;
+    .nav-button {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
+        border-radius: 0.8rem;
     }
 
-    /* Modal très petit écran */
     .modal {
-        padding: 25px 15px;
-    }
-
-    .modal h2 {
-        font-size: 20px;
-    }
-
-    .modal p {
-        font-size: 13px;
-        margin-bottom: 20px;
-    }
-
-    .form-group {
-        margin-bottom: 15px;
-    }
-
-    .form-group label {
-        font-size: 12px;
+        padding: 2vh 2vw;
     }
 
     .form-group input {
-        padding: 12px;
-        font-size: 14px;
+        padding: 1rem;
+        font-size: 0.9rem;
     }
 
-    .modal-btn {
-        padding: 12px;
-        font-size: 14px;
-    }
-
-    /* Bouton son */
     .sound-toggle-btn {
-        width: 35px;
-        height: 35px;
-        font-size: 16px;
-    }
-
-    .sound-control {
-        margin-right: 8px;
+        width: 3.5vh;
+        height: 3.5vh;
     }
 }
 
@@ -873,125 +751,49 @@ header {
 ======================================== */
 @media (max-width: 480px) {
     header {
-        padding: 10px 12px;
+        padding: 1.5vh 2vw;
     }
 
     .logo-img {
-        height: 35px;
+        height: 5vh;
     }
 
     .app-name {
-        font-size: 12px;
-    }
-
-    .auth-section {
-        gap: 8px;
-    }
-
-    .login-btn {
-        padding: 6px 12px;
-        font-size: 12px;
-    }
-
-    .user-points {
-        padding: 3px 6px;
-        font-size: 10px;
-        gap: 3px;
-    }
-
-    .logout-btn {
-        padding: 5px 10px;
-        font-size: 11px;
+        font-size: 0.9rem;
     }
 
     .main-content {
-        padding: 12px 8px;
-        gap: 12px;
+        padding: 1.5vh 2vw;
+        gap: 1.5vh;
+        overflow-x: auto;
     }
 
     .section-title {
-        font-size: 20px;
-        margin-bottom: 6px;
+        font-size: 1.2rem;
     }
 
     .section-subtitle {
-        font-size: 12px;
-        margin-bottom: 15px;
-    }
-
-    .nav-button {
-        padding: 10px 15px;
-        font-size: 12px;
-        border-radius: 10px;
-    }
-
-    .button-description {
-        font-size: 9px;
-        margin-top: 3px;
-    }
-
-    .nav-button::after {
-        right: 12px;
-        font-size: 14px;
+        font-size: 0.8rem;
     }
 
     .image-container {
-        height: 200px;
+        height: auto;
+        max-width: 100%;
     }
 
-    .placeholder-text {
-        font-size: 12px;
-        padding: 15px;
+    .nav-button {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+        border-radius: 0.7rem;
     }
 
-    /* Modal */
     .modal {
-        padding: 20px 12px;
+        padding: 1.5vh 2vw;
     }
 
-    .modal h2 {
-        font-size: 18px;
-        margin-bottom: 8px;
-    }
-
-    .modal p {
-        font-size: 12px;
-        margin-bottom: 15px;
-    }
-
-    .form-group {
-        margin-bottom: 12px;
-    }
-
-    .form-group label {
-        font-size: 11px;
-        margin-bottom: 6px;
-    }
-
-    .form-group input {
-        padding: 10px;
-        font-size: 13px;
-    }
-
-    .modal-btn {
-        padding: 10px;
-        font-size: 13px;
-    }
-
-    .error-message {
-        padding: 10px;
-        font-size: 12px;
-    }
-
-    /* Bouton son */
     .sound-toggle-btn {
-        width: 32px;
-        height: 32px;
-        font-size: 14px;
-    }
-
-    .sound-control {
-        margin-right: 5px;
+        width: 3vh;
+        height: 3vh;
     }
 }
 
@@ -1001,25 +803,25 @@ header {
 @media (min-width: 1440px) {
     .main-content {
         max-width: 1600px;
-        padding: 50px 80px;
+        padding: 5vh 5vw;
     }
 
     .section-title {
-        font-size: 40px;
+        font-size: 3rem;
     }
 
     .section-subtitle {
-        font-size: 18px;
+        font-size: 1.2rem;
     }
 
     .nav-button {
-        padding: 20px 35px;
-        font-size: 17px;
+        padding: 1.5rem 3rem;
+        font-size: 1.1rem;
     }
 
     .image-container {
         max-width: 600px;
-        height: 600px;
+        height: auto;
     }
 }
 
@@ -1029,24 +831,24 @@ header {
 @media (min-width: 1920px) {
     .main-content {
         max-width: 1800px;
-        padding: 60px 100px;
+        padding: 6vh 6vw;
     }
 
     header {
-        padding: 30px 100px;
+        padding: 3vh 6vw;
     }
 
     .section-title {
-        font-size: 44px;
+        font-size: 3.2rem;
     }
 
     .section-subtitle {
-        font-size: 20px;
+        font-size: 1.3rem;
     }
 
     .image-container {
         max-width: 700px;
-        height: 700px;
+        height: auto;
     }
 }
 
@@ -1057,7 +859,8 @@ header {
     .main-content {
         min-height: auto;
         max-height: none;
-        padding: 15px;
+        padding: 2vh 2vw;
+        overflow-x: auto;
     }
 
     .left-section,
@@ -1066,21 +869,19 @@ header {
     }
 
     .section-title {
-        font-size: 20px;
-        margin-bottom: 5px;
+        font-size: 1rem;
     }
 
     .section-subtitle {
-        font-size: 12px;
-        margin-bottom: 10px;
+        font-size: 0.8rem;
     }
 
     .nav-button {
-        padding: 10px 15px;
+        padding: 0.6rem 1rem;
     }
 
     .image-container {
-        height: 200px;
+        height: auto;
     }
 }
 
@@ -1097,7 +898,6 @@ header {
    AMÉLIORATION TACTILE
 ======================================== */
 @media (hover: none) and (pointer: coarse) {
-    /* Augmenter les zones tactiles sur mobile */
     .nav-button,
     .login-btn,
     .logout-btn,
@@ -1107,7 +907,6 @@ header {
         min-width: 44px;
     }
 
-    /* Désactiver les effets hover sur tactile */
     .nav-button:hover,
     .login-btn:hover,
     .logout-btn:hover {
