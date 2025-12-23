@@ -30,7 +30,7 @@ const PAGES = {
         </div>
          <div class="right-section">
             <div class="image-container">
-                <img src="assets/img/log.png" alt="Basket Club Bergues - Arbitrage" style="width: 100%; height: 100%; object-fit: contain;">
+                <img src="assets/img/danny.png" alt="Basket Club Bergues - Arbitrage" style="width: 100%; height: 100%; object-fit: contain;">
             </div>
         </div>
     `,

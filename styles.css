@@ -913,3 +913,52 @@ header {
         transform: none;
     }
 }
+
+/* ========================================
+   IMAGE AGRANDIE - Remplacez les règles .image-container existantes
+======================================== */
+
+.image-container {
+    width: 100%;
+    max-width: 480px; /* Agrandi de 400px à 480px */
+    height: 480px; /* Agrandi de 400px à 480px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Responsive pour l'image */
+@media (max-width: 1024px) {
+    .image-container {
+        max-width: 380px;
+        height: 380px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        max-width: 100%;
+        height: 300px;
+    }
+}
+
+@media (max-width: 640px) {
+    .image-container {
+        height: 260px;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container {
+        height: 220px;
+    }
+}
+
+/* Mode paysage mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .image-container {
+        height: 200px;
+    }
+}
